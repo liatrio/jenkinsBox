@@ -38,7 +38,8 @@ Vagrant.configure(2) do |config|
     inline:"sudo service jenkins start"
   config.vm.provision "shell",
     inline:"sudo yum install -y git"
-
+  config.vm.provision "shell",
+    inline:"sudo systemctl stop firewalld"
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
