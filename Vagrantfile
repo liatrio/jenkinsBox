@@ -40,6 +40,7 @@ Vagrant.configure(2) do |config|
     inline:"sudo yum install -y git"
   config.vm.provision "shell",
     inline:"sudo systemctl stop firewalld"
+  config.vm.synced_folder "~/Projects", "/home/vagrant/Projects"
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
