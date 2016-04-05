@@ -39,6 +39,10 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell",
     inline:"sudo yum install -y git"
   config.vm.provision "shell",
+    inline:"sudo yum install -y epel-release"
+  config.vm.provision "shell",
+    inline:"sudo yum install -y python34"
+  config.vm.provision "shell",
     inline:"sudo systemctl stop firewalld"
   config.vm.synced_folder "~/Projects", "/home/vagrant/Projects"
 
