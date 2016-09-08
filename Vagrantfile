@@ -48,7 +48,5 @@ Vagrant.configure(2) do |config|
     inline:"sudo systemctl stop firewalld"
   config.vm.provision "shell",
     inline:"sudo systemctl disable firewalld"
-  config.vm.synced_folder "~/Projects", "/home/vagrant/Projects"
-  config.vm.synced_folder "~/.ssh", "/var/lib/jenkins/.ssh"
 
 end
